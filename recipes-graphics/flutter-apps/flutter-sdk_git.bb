@@ -21,7 +21,7 @@ DEPENDS += "\
 RDEPENDS_${PN}-native += "ca-certificates-native curl-native perl perl-modules unzip-native"
 RDEPENDS_nativesdk-${PN} += "ca-certificates-native curl-native perl perl-modules unzip-native"
 
-SRC_URI = "http://mod.lge.com/hub/flutter-webOS/flutter-webos.git;protocol=https;nobranch=1"
+SRC_URI = "git://github.com/flutter/flutter.git;protocol=https;nobranch=1"
 FLUTTER_SDK_TAG ??= "${AUTOREV}"
 SRCREV ??= "${FLUTTER_SDK_TAG}"
 
@@ -41,7 +41,7 @@ common_compile() {
     flutter config --no-enable-linux-desktop
     flutter config --enable-custom-devices
 
-    bbnote `flutter-webos doctor -v`
+    bbnote `flutter doctor -v`
 }
 
 do_compile_class-native() {

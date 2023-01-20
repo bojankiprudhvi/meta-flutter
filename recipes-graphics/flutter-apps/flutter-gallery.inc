@@ -8,13 +8,13 @@ SECTION = "graphics"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3ac21e3d8ebe7dd79f273ca11b9e7b4e"
 
-SRC_URI = "http://mod.lge.com/hub/flutter-webOS/test_applications/custom_fonts.git;lfs=0;protocol=https"
+SRC_URI = "git://github.com/flutter/gallery.git;lfs=0;protocol=https;destsuffix=git"
 
-SRCREV = "026ebaaa76b47833531e76b210c3ce898d8ddaf1"
+SRCREV = "9eb785cb997ff56c46e933c1c591f0a6f31454f6"
 
 S = "${WORKDIR}/git"
 
-PUBSPEC_APPNAME = "font"
+PUBSPEC_APPNAME = "gallery"
 
 inherit flutter-app
 
